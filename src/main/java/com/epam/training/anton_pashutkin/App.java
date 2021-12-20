@@ -1,13 +1,7 @@
 package com.epam.training.anton_pashutkin;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) {
+        System.out.println("\u2018Hi\u2019");
     }
 }
