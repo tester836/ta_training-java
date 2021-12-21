@@ -1,4 +1,4 @@
-package com.epam.training.anton_pashutkin;
+package com.epam.training.anton_pashutkin.fundamental.main_task;
 
 import java.io.BufferedReader;
 import java.io.IOException;

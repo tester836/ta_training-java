@@ -1,4 +1,4 @@
-package com.epam.training.anton_pashutkin;
+package com.epam.training.anton_pashutkin.fundamental.main_task;
 
 public class Task3 {
     //3.Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
