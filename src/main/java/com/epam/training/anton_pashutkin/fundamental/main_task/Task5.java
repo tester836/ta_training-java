@@ -12,7 +12,6 @@ public class Task5 {
         int monthNum = sc.nextInt();
         System.out.println(months(monthNum));
     }
-
     public static String months(int monthNumber){
         String[] monthsArray = {
                 "January",
