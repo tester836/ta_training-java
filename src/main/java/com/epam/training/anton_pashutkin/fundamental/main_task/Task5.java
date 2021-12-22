@@ -12,9 +12,8 @@ public class Task5 {
         int monthNum = sc.nextInt();
         System.out.println(months(monthNum));
     }
-
     public static String months(int monthNumber){
-        String[] monthName = {
+        String[] monthsArray = {
                 "January",
                 "February",
                 "March",
@@ -28,8 +27,8 @@ public class Task5 {
                 "November",
                 "December"
         };
-        if(monthNumber > 0 && monthNumber <= monthName.length)
-            return monthName[monthNumber-1];
+        if(monthNumber > 0 && monthNumber <= monthsArray.length)
+            return monthsArray[monthNumber-1];
         else
             return "Sorry, month number should be from 1 to 12.";
     }
