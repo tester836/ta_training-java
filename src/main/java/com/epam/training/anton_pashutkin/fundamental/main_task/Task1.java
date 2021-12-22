@@ -4,11 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// todo
-        /*
-        5.   Ввести число от 1 до 12. Вывести на консоль название месяца,
-        соответствующего данному числу. Осуществить проверку корректности ввода чисел.
-        */
 public class Task1 {
     public static void main(String[] args) throws IOException {
             //1.Приветствовать любого пользователя при вводе его имени через командную строку.
