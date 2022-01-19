@@ -8,7 +8,7 @@ public class CarsDataBase {
         CarsList list = new CarsList();
 
         list.addCar(new Car(
-                01,
+                1,
                 2015,
                 16200,
                 "BMW",
@@ -16,7 +16,7 @@ public class CarsDataBase {
                 "White",
                 "AB 123 FG (AL)"));
         list.addCar(new Car(
-                02,
+                2,
                 2016,
                 18009,
                 "BMW",
@@ -30,7 +30,7 @@ public class CarsDataBase {
 
         ArrayList<Car> listBrand = list.getCarBrandFiltered("BMW");
         for (Car car : listBrand) {
-            System.out.println(car);""
+            System.out.println(car);
         }
 
         System.out.println("Car model list filtered with 'X1':\n");
@@ -46,6 +46,4 @@ public class CarsDataBase {
         }
 
     }
-    }
-
 }
