@@ -9,7 +9,7 @@ public class CarsDataBase {
 
         list.addCar(new Car(
                 1,
-                2015,
+                2016,
                 16200,
                 "BMW",
                 "Gran Tourer 216d F46",
@@ -56,7 +56,7 @@ public class CarsDataBase {
                 6,
                 1993,
                 920,
-                "Hyundai",
+                "Hyundai Pony",
                 "X1",
                 "Red",
                 "1234 AB-7 (BY)"));
@@ -72,21 +72,21 @@ public class CarsDataBase {
 
 
 
-        System.out.println("\nCar brand list filtered with 'BMW':");
+        System.out.println("\nCar list filtered with 'BMW' brand:");
 
         ArrayList<Car> listBrand = list.getCarBrandFiltered("BMW");
         for (Car car : listBrand) {
             System.out.println(car);
         }
 
-        System.out.println("\nCar model list filtered with 'X1':");
-        ArrayList<Car> listModel = list.getCarModelFiltered("X1");
+        System.out.println("\nCar list filtered with 'X1' model and used more than 10 years:");
+        ArrayList<Car> listModel = list.getCarModelFiltered("X1", 2012);
         for (Car car : listModel) {
             System.out.println(car);
         }
 
-        System.out.println("\nCar list filtered with year manufactured after 2015 and price up to $20k:");
-        ArrayList<Car> listYearPrice = list.getCarYearPriceFiltered(2015, 20000);
+        System.out.println("\nCar list filtered with 2016 year of manufacture and price more than $18k:");
+        ArrayList<Car> listYearPrice = list.getCarYearPriceFiltered(2016, 18000);
         for (Car car : listYearPrice) {
             System.out.println(car);
         }
