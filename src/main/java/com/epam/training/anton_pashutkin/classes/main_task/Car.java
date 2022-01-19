@@ -59,12 +59,10 @@ public class Car {
     }
 
     public String toString(){
-        return String.format("Car brand: %s",carBrand) +
-               String.format("Car model: %s", carModel) +
-               String.format("Car year and price: %s %s", carYear, carPrice);
+        return String.format("id: #%s, ", id) +
+               String.format("car brand: %s, ",carBrand) +
+               String.format("model: %s, ", carModel) +
+               String.format("year: %s, ", carYear) +
+               String.format("price: $%s ", carPrice);
     }
 }
-
-
-
-

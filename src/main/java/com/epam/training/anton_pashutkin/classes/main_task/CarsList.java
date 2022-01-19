@@ -12,19 +12,16 @@ public class CarsList {
     public  ArrayList<Car> getCarBrandFiltered (String carBrand){
         ArrayList<Car> carArrayList = new ArrayList<>();
         for (Car car : carList){
-            if (car.getCarBrand() == carBrand){
-                carArrayList.add(car);
-            }
+            if (car.getCarBrand() == carBrand) carArrayList.add(car);
         }
         return carArrayList;
     }
 
-    public  ArrayList<Car> getCarModelFiltered (String carModel){
+    public  ArrayList<Car> getCarModelFiltered (String carModel, int carYear){
         ArrayList<Car> carArrayList = new ArrayList<>();
         for (Car car : carList){
-            if (car.getCarModel() == carModel){
+            if (car.getCarModel() == carModel && car.getCarYear() < carYear)
                 carArrayList.add(car);
-            }
         }
         return carArrayList;
     }
@@ -32,7 +29,7 @@ public class CarsList {
     public  ArrayList<Car> getCarYearPriceFiltered(int carYear, int carPrice){
         ArrayList<Car> carArrayList = new ArrayList<>();
         for (Car car : carList){
-            if (car.getCarYear() >= carYear && car.getCarPrice() < carPrice) {
+            if (car.getCarYear() == carYear && car.getCarPrice() > carPrice) {
                 carArrayList.add(car);
             }
         }
