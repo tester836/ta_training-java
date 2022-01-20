@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 
 public class Task4 {
-    // 4. Ввести целые числа как аргументы командной строки,
-    // подсчитать их сумму, произведение и вывести результат на консоль.
-
     public static void main(String[] args) {
         System.out.println("- Enter two integer numbers, please.");
         Scanner sc = new Scanner(System.in);
