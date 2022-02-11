@@ -1,5 +1,4 @@
-# ta_training-java
-test automation training course
+#test automation training course
 
 Fundamental main task:
 
