@@ -1,5 +1,6 @@
 package com.epam.training.anton_pashutkin.collections.controller;
 
+import com.epam.training.anton_pashutkin.collections.fileProvider.FileProvider;
 import com.epam.training.anton_pashutkin.collections.model.collection.*;
 import com.epam.training.anton_pashutkin.collections.model.factory.*;
 import java.util.*;
@@ -15,16 +16,31 @@ public class Controller {
 
         System.out.println("Enter the artist:");
         artist=input.nextLine();
+        while (artist.isEmpty()) {
+            System.out.println("The value is invalid, enter again:");
+            artist = input.nextLine();
+        }
 
         System.out.println("Enter the track title:");
-        title =input.nextLine();
-
-        System.out.println("Enter the year of track release:");
-        year =input.nextInt();
+        title = input.nextLine();
+        while (title.isEmpty()) {
+            System.out.println("The value is invalid, enter again:");
+            title = input.nextLine();
+        }
 
         System.out.println("Enter the track album:");
-        album=input.nextLine();
+        album = input.nextLine();
+        while (album.isEmpty()) {
+            System.out.println("The value is invalid, enter again:");
+            album = input.nextLine();
+        }
 
+        System.out.println("Enter the year of track release:");
+        year = input.nextInt();
+        while (year <= 0) {
+            System.out.println("The value is invalid, enter again:");
+            year = input.nextInt();
+        }
 
         System.out.println("Choose the genre from the list: Rock, Classic, Soundtrack, Folk, R&B");
         genre=input.next();
@@ -35,6 +51,10 @@ public class Controller {
 
         System.out.println("Enter the track duration (in seconds):");
         duration = input.nextInt();
+        while (duration <= 0) {
+            System.out.println("The value is invalid, enter again:");
+            duration = input.nextInt();
+        }
 
         Track track;
 
@@ -84,6 +104,21 @@ public class Controller {
 
 
     }
+
+    public static String DurationInStandardView (int diskDuration){
+        int hours = diskDuration / 3600;
+        int minutes = diskDuration % 3600 / 60;
+        int seconds = (diskDuration % 3600) % 60;
+
+        if (hours > 0) {
+            return hours + "h:" + minutes + "m:" + seconds + "s ";
+        } else if (minutes > 0) {
+            return minutes + "m:" + seconds + "s ";
+        } else {
+            return seconds + "s ";
+        }
+    }
+
 
     //todo display duration in hours minutes seconds
     public static void CalculateDiskDuration(Disk disc){

@@ -62,12 +62,12 @@ public class Playlist extends ArrayList<Track> {
 
     public boolean contains(Track trackFind) {
 
-        String find, ths;
+        String find, artist;
 
         for (Track track: this){
-            ths=track.getArtist();
+            artist=track.getArtist();
             find=trackFind.getArtist();
-            if(ths.equals(find)){
+            if(artist.equals(find)){
                 return true;
             }
         }

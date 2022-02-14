@@ -1,4 +1,4 @@
-package com.epam.training.anton_pashutkin.collections.controller;
+package com.epam.training.anton_pashutkin.collections.fileProvider;
 
 import com.epam.training.anton_pashutkin.collections.model.collection.*;
 import com.epam.training.anton_pashutkin.collections.model.factory.*;
@@ -15,8 +15,10 @@ public class FileProvider {
             String choice;
             Track track;
             while (scan.hasNextLine() && scan.hasNext()){
+//                if (!scan.nextLine().isEmpty() && scan.nextLine().charAt(0) == '#')
+//                    continue;
                 part = scan.nextLine().split(",");
-                choice = part[5];
+                choice = part[4];
                 switch (choice)
                 {
                     case "Classic":
@@ -25,7 +27,7 @@ public class FileProvider {
                                 part[1],
                                 Integer.parseInt(part[2]),
                                 part[3],
-                                Integer.parseInt(part[4]));
+                                Integer.parseInt(part[5]));
                         break;
 
                     case "Soundtrack":
@@ -34,7 +36,7 @@ public class FileProvider {
                                 part[1],
                                 Integer.parseInt(part[2]),
                                 part[3],
-                                Integer.parseInt(part[4]));
+                                Integer.parseInt(part[5]));
                         break;
 
                     case "Folk":
@@ -43,7 +45,7 @@ public class FileProvider {
                                 part[1],
                                 Integer.parseInt(part[2]),
                                 part[3],
-                                Integer.parseInt(part[4]));
+                                Integer.parseInt(part[5]));
                         break;
 
                     case "R&B":
@@ -52,7 +54,7 @@ public class FileProvider {
                                 part[1],
                                 Integer.parseInt(part[2]),
                                 part[3],
-                                Integer.parseInt(part[4]));
+                                Integer.parseInt(part[5]));
                         break;
 
                     case "Rock":
@@ -62,7 +64,7 @@ public class FileProvider {
                                 part[1],
                                 Integer.parseInt(part[2]),
                                 part[3],
-                                Integer.parseInt(part[4]));
+                                Integer.parseInt(part[5]));
                 }
 
                 if(!playlist.contains(track))
