@@ -4,6 +4,8 @@ package com.epam.training.anton_pashutkin.collections.model.collection;
 import com.epam.training.anton_pashutkin.collections.model.factory.Track;
 import java.util.ArrayList;
 
+import static com.epam.training.anton_pashutkin.collections.controller.Controller.DurationInStandardView;
+
 public class Disk extends ArrayList<Track> {
 
     private String name;
@@ -63,7 +65,7 @@ public class Disk extends ArrayList<Track> {
                 "Year: " + track.getYear() + ", " +
                 "Album: " + track.getAlbum() + ", " +
                 "Genre: " + track.getGenre() + ", " +
-                "Duration: " + track.getDuration() + " \n\r"
+                "Duration: " + DurationInStandardView(track.getDuration()) + " \n\r"
             );
         }
         return buffer.toString();

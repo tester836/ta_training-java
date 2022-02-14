@@ -4,6 +4,8 @@ package com.epam.training.anton_pashutkin.collections.model.collection;
 import com.epam.training.anton_pashutkin.collections.model.factory.Track;
 import java.util.ArrayList;
 
+import static com.epam.training.anton_pashutkin.collections.controller.Controller.DurationInStandardView;
+
 public class Playlist extends ArrayList<Track> {
 
     private static Playlist instance;
@@ -34,7 +36,6 @@ public class Playlist extends ArrayList<Track> {
     }
 
     @Override
-    //the same method in Disk class
     public String toString() {
         StringBuilder buffer = new StringBuilder();
         for (Track track: this) {
@@ -44,7 +45,7 @@ public class Playlist extends ArrayList<Track> {
                             "Year: " + track.getYear() + ", " +
                             "Album: " + track.getAlbum() + ", " +
                             "Genre: " + track.getGenre() + ", " +
-                            "Duration: " + track.getDuration() + " \n\r"
+                            "Duration: " + DurationInStandardView(track.getDuration()) + " \n\r"
             );
         }
         return buffer.toString();
@@ -53,10 +54,9 @@ public class Playlist extends ArrayList<Track> {
     public int indexOf(String title) {
 
         for (int i=0; i<this.size();i++) {
-            if (this.get(i).getTitle().equals(title))
+            if (this.get(i).getTitle().contains(title))
                 return i;
         }
-
         return -1;
     }
 
@@ -67,11 +67,11 @@ public class Playlist extends ArrayList<Track> {
         for (Track track: this){
             artist=track.getArtist();
             find=trackFind.getArtist();
-            if(artist.equals(find)){
+
+            if (artist.equals(find)){
                 return true;
             }
         }
         return false;
     }
-
 }

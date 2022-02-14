@@ -119,15 +119,13 @@ public class Controller {
         }
     }
 
-
-    //todo display duration in hours minutes seconds
     public static void CalculateDiskDuration(Disk disc){
         int diskDuration = 0;
         for (Track track: disc){
             diskDuration += track.getDuration();
         }
 
-        System.out.println("Disk duration is: " + diskDuration);
+        System.out.println("Disk duration is: " + DurationInStandardView(diskDuration));
     }
 
     public static void DiskSort(Disk disc){
@@ -142,7 +140,7 @@ public class Controller {
     public static void SaveDisk(Disk disc,String dir){
         if (!disc.isEmpty()){
             FileProvider.WriteToDisc(disc,dir);
-            System.out.println("Done!");
+            System.out.println("Saved!");
             disc.resetInstance();
         }
         else System.out.println("Disk is empty.");
@@ -153,7 +151,7 @@ public class Controller {
         System.out.println("Enter the title to search:");
 
         int i=playlist.indexOf(input.next());
-        if(i==-1)
+        if (i==-1)
             System.out.println("No result.");
         else
             System.out.println("Result:" + "\r\n" + "#" + i + "  " + playlist.get(i));

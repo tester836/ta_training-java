@@ -2,7 +2,6 @@ package com.epam.training.anton_pashutkin.collections.fileProvider;
 
 import com.epam.training.anton_pashutkin.collections.model.collection.*;
 import com.epam.training.anton_pashutkin.collections.model.factory.*;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -15,8 +14,6 @@ public class FileProvider {
             String choice;
             Track track;
             while (scan.hasNextLine() && scan.hasNext()){
-//                if (!scan.nextLine().isEmpty() && scan.nextLine().charAt(0) == '#')
-//                    continue;
                 part = scan.nextLine().split(",");
                 choice = part[4];
                 switch (choice)
@@ -77,11 +74,10 @@ public class FileProvider {
     }
 
     public static void WriteToDisc(Disk disc, String dir){
-        String discName=dir+disc.getName()+".txt";
+        String discName = dir + disc.getName() + ".txt";
         try(FileWriter writer = new FileWriter(discName,false)) {
 
             for (Track track : disc){
-
                 writer.write("\n"+track.writeToFile());
             }
         }

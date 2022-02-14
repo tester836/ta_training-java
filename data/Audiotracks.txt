@@ -7,3 +7,4 @@ Edouard-Leon Scott de Martinville,Au clair de la lune,1860,First,Folk,11
 Thomas Edison,Animal sounds,1878,Second,Folk,78
 Владимир Высоцкий,Баллада о борьбе,1975,Стрелы Робин Гуда,Soundtrack,248
 Pachelbel,Canon,1680,Single,Classic,229
+Pink Floyd,The Wall,1979,The Wall,Rock,4880

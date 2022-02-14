@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Audiorecording {
     private static final String filename = "data/Audiotracks.txt";
-    private static final String diskDir="D://VirtualCD";
+    private static final String diskDir="D://VirtualCD/";
 
     public static void main(String[] args) {
         Playlist playlist;
@@ -37,40 +37,40 @@ public class Audiorecording {
                     System.out.println(disc);
                     break;
 
-                case "3":
+                case "3": case "create disk":
                     Controller.CreateDisk();
                     System.out.println("Done! \r\nDisk: \r\n"+disc.getName());
                     System.out.println(disc);
                     break;
 
-                case "4":
-                    Controller.AddTrackToPlaylist(filename);
+                case "4": case "add track to playlist":
+                    Controller.AddTrackToPlaylist (filename);
                     break;
 
-                case "5":
+                case "5": case "add track to disk":
                     disc = Disk.getInstance();
-                    Controller.AddTrackToDisk(disc,filename,diskDir);
+                    Controller.AddTrackToDisk (disc, filename, diskDir);
                     break;
 
-                case "6":
+                case "6": case "disk sorting":
                     disc = Disk.getInstance();
                     Controller.DiskSort(disc);
                     break;
 
-                case "7":
-                    Controller.FindTrack(filename);
+                case "7": case "track search":
+                    Controller.FindTrack (filename);
                     break;
 
-                case "8":
-                    Controller.SaveDisk(disc,filename);
-                    Controller.CalculateDiskDuration(disc);
+                case "8": case "disk duration":
+                    Controller.SaveDisk (disc, filename);
+                    Controller.CalculateDiskDuration (disc);
                     break;
 
-                case "9":
-                    Controller.SaveDisk(disc,diskDir);
+                case "9": case "save disk":
+                    Controller.SaveDisk (disc, diskDir);
                     break;
 
-                case "10":
+                case "10": case "exit":
                     out=false;
                     break;
 
