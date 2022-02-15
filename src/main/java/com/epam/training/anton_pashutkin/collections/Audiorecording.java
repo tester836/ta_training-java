@@ -51,7 +51,7 @@ public class Audiorecording {
                     disc = Disk.getInstance();
                     Controller.AddTrackToDisk (disc, filename, diskDir);
                     break;
-
+//todo 6
                 case "6": case "disk sorting":
                     disc = Disk.getInstance();
                     Controller.DiskSort(disc);
