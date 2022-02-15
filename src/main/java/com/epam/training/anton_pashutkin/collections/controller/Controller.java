@@ -86,18 +86,19 @@ public class Controller {
 
     public static void AddTrackToDisk(Disk disc, String filename, String dir){
 
-        if (!disc.isEmpty()||!disc.getName().equals("Untitled")){
+        if (!disc.isEmpty() || !disc.getName().equals("Untitled")){
 
-            Playlist playlist =FileProvider.ReadFromFile(filename);
+            Playlist playlist = FileProvider.ReadFromFile(filename);
             playlist.print();
             System.out.println("Which track do you want to add?");
             int num=input.nextInt();
-            while (num<=0||num>playlist.size()){
-                System.out.println("Wrong track number, repeat please.  "+ playlist.size());
+            while (num <= 0 || num > playlist.size()){
+                System.out.println("Wrong track number, maximum is: "+ playlist.size());
                 num=input.nextInt();
             }
+
             disc.add(playlist.get(num-1));
-            FileProvider.WriteToDisc(disc,dir);
+            FileProvider.WriteToDisc(disc, dir);
 
         }
         else System.out.println("You need to create a disk.");
@@ -131,10 +132,11 @@ public class Controller {
     public static void DiskSort(Disk disc){
 
         Collections.sort(disc, (Track o1, Track o2)->{
-            if(o1.getArtist().compareTo(o2.getArtist())==0)
-                return o1.getAlbum().compareTo(o2.getAlbum());
-            return o1.getArtist().compareTo(o2.getArtist());
+            if(o1.getGenre().compareTo(o2.getGenre()) == 0)
+             return o1.getArtist().compareTo(o2.getArtist());
+            return o1.getGenre().compareTo(o2.getGenre());
         });
+        System.out.println("Disk is sorted by genres.");
     }
 
     public static void SaveDisk(Disk disc,String dir){
