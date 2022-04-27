@@ -2,7 +2,7 @@ package com.epam.training.anton_pashutkin.classes.main_task;
 
 import java.util.ArrayList;
 
-public class CarsList {
+public class CarsFilteredList {
     private ArrayList<Car> carList = new ArrayList<>();
 
     public void addCar(Car car){

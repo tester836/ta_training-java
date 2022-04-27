@@ -2,10 +2,10 @@ package com.epam.training.anton_pashutkin.classes.main_task;
 
 import java.util.ArrayList;
 
-public class CarsDataBase {
+public class CarsMain {
     public static void main(String[] args) {
 
-        CarsList list = new CarsList();
+        CarsFilteredList list = new CarsFilteredList();
 
         list.addCar(new Car(
                 1,

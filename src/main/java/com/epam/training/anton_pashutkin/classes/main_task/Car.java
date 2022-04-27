@@ -27,21 +27,20 @@ public class Car {
     }
 
     public Car(
-            int id,
-            int carYear,
-            int carPrice,
-            String carBrand,
-            String carModel,
-            String carColor,
-            String carNumber) {
-
-        this.id = id;
-        this.carYear = carYear;
-        this.carPrice = carPrice;
-        this.carBrand = carBrand;
-        this.carModel = carModel;
-        this.carColor = carColor;
-        this.carNumber = carNumber;
+        int id,
+        int carYear,
+        int carPrice,
+        String carBrand,
+        String carModel,
+        String carColor,
+        String carNumber) {
+            this.id = id;
+            this.carYear = carYear;
+            this.carPrice = carPrice;
+            this.carBrand = carBrand;
+            this.carModel = carModel;
+            this.carColor = carColor;
+            this.carNumber = carNumber;
     }
 
     public String toString(){
